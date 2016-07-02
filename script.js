@@ -1,6 +1,6 @@
 var spaApp = angular.module('spaApp', ['ngRoute']);
 
-spaApp.config(function ($routeProvider) {
+spaApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
 
         .when('/', {
@@ -17,6 +17,8 @@ spaApp.config(function ($routeProvider) {
             templateUrl: 'pages/contact.html',
             controller: 'contactController'
         });
+
+    $locationProvider.html5Mode(true);
 });
 
 
